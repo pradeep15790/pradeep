@@ -1,0 +1,9 @@
+---
+- name: Install Vim Package
+  hosts: all
+  become: yes
+  tasks:
+    - name: Ensure Vim is installed
+      yum:
+        name: vim
+        state: present
